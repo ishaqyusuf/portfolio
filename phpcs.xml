@@ -1,0 +1,58 @@
+<ruleset name="MyStandard">
+    <description>My custom coding standard.</description>
+    <rule ref="PEAR">
+        <exclude name="PEAR.NamingConventions.ValidFunctionName"/>
+        <exclude name="PEAR.NamingConventions.ValidVariableName"/>
+        <exclude name="PEAR.Commenting.ClassComment"/>
+        <exclude name="Generic.Commenting.DocComment.MissingShort"/>
+        <exclude name="PEAR.Commenting.ClassComment.Missing"/>
+        <exclude name="PEAR.Commenting.FileComment.Missing"/>
+        <exclude name="PEAR.Commenting.FunctionComment.Missing"/>
+        <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
+        <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
+        <exclude name="PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingCategoryTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingPackageTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingLinkTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingAuthorTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingLicenseTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingVersion"/>
+        <exclude name="PEAR.Commenting.InlineComment"/>
+    </rule>
+    <rule ref="config-override.xml"/>
+
+    <arg name="extensions" value="php"/>
+
+    <!-- Ignore no-code-found -->
+    <rule ref="Internal.NoCodeFound">
+        <severity>0</severity>
+    </rule>
+
+    <!-- Ensures PHP believes the syntax is clean -->
+    <rule ref="Generic.PHP.Syntax"/>
+
+    <rule ref="PSR2">
+        <!-- Exclude from PSR1 -->
+        <exclude name="Squiz.Classes.ValidClassName"/>
+        <exclude name="PSR1.Classes.ClassDeclaration"/>
+        <exclude name="PSR1.Methods.CamelCapsMethodName"/>
+
+        <!-- Exclude from PSR2 -->
+        <exclude name="Generic.Formatting.DisallowMultipleStatements.SameLine"/>
+        <exclude name="Generic.Files.LineEndings"/>
+        <exclude name="PSR2.Files.EndFileNewline"/>
+        <exclude name="Generic.Files.LineLength"/>
+        <exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
+        <exclude name="PSR2.Methods.MethodDeclaration.Underscore"/>
+    </rule>
+
+    <rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
+
+    <rule ref="Generic.WhiteSpace.ScopeIndent">
+        <properties>
+            <property name="indent" value="3"/>
+            <property name="tabIndent" value="true"/>
+        </properties>
+    </rule>
+
+</ruleset>

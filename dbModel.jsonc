@@ -1,0 +1,81 @@
+{
+    //api done
+    "interactions": {
+        "meta": {
+            "variables": [],
+            "permissions": []
+        }
+    },
+
+    //api done
+    "ledgers": {
+        "author_id": "interaction_id",
+        "meta": {
+            "variables": [],
+            "permissions": []
+        }
+    },
+    //done
+    "templates": {
+        "author_id": "interaction_id",
+        "title": "",
+        "content": {
+            "label": "",
+            "fields": [
+                {
+                    "name": "",
+                    "title": "",
+                    "value": "", //interaction.var_1+ledger.var_2
+                    "expression": true
+                }
+            ]
+        }
+    },
+    //done
+    "chain_events": {
+        "author_id": "interaction_id",
+        "post_parent": "template_id",
+        "title": "",
+        "content": {}
+    },
+    //on template created: create event.
+    "events": {
+        "author_id": "interaction_id",
+        "post_parent": "template_id",
+        "title": "Loan Payment",
+        "content": {
+            "every": "day",
+            "when": "Template is created",
+            "start": ""
+        }
+    },
+    //done
+    "variables": {
+        "author_id": "interaction_id",
+        "title": "",
+        "content": {
+            "var_1": "val",
+            "var_2": "val"
+        }
+    },
+    "entry": {
+        "author_id": "ledger_id",
+        "post_parent": "template_id",
+        "title": "title",
+        "content": {
+            "fields": {
+                "value": "",
+                "field_1": 1000
+            }
+        }
+    },
+    "stats": {
+        "author_id": "interaction_id",
+        "post_parent": "template_id",
+        "title": "Stat Title",
+        "content": {
+            "value": "salary.value+ledger.var_2",
+            "expression": true
+        }
+    }
+}
